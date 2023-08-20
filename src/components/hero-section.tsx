@@ -47,7 +47,7 @@ export default function HeroSection() {
                         duration: 0.5,
                         delay: 0.25,
                     }}
-                    className='text-2xl lg:text-4xl leading-relaxed text-center'>Développeur Full-Stack avec <span className='font-semibold'> 5 ans d'expériences</span></motion.h2>
+                    className='text-2xl lg:text-4xl leading-relaxed text-center'>Développeur Full-Stack avec <span className='font-semibold'> 5 ans d&apos;expériences</span></motion.h2>
                     <motion.h3 
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
