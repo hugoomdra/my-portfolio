@@ -25,7 +25,7 @@ export default function Projects() {
 
                     {projects.map((project) => (
 
-                        <div className='flex flex-col gap-y-4'>
+                        <div className='flex flex-col gap-y-4' key={project.name}>
 
                             <Image src={project.image} alt='' width={1000} height={1000} className='rounded-md'></Image>
 
