@@ -5,6 +5,21 @@ import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
 
+
+function getEmoji() {
+
+    let hours = new Date().getHours();
+
+   let emoji = '👋';
+
+    if (hours >= 0 && hours < 7) {
+        emoji = '😴';
+    }
+
+    return emoji;
+}
+
+
 export default function HeroSection() {
     return (
         <div className='py-16 bg-gradient-to-b from-blue-200'>
@@ -18,45 +33,45 @@ export default function HeroSection() {
                     }}
                     className='relative'>
                     <Image src="/images/hugo.jpeg" alt="Picture of the author" width={200} height={200} className='rounded-full border-white border-4 w-24 h-24' />
-                    <motion.div 
-                        initial={{ rotate: 20}}
-                        animate={{ rotate: 0 }}
+                    <motion.div
+                        initial={{ rotate: 0 }}
+                        animate={{ rotate: 20 }}
                         transition={{
                             type: "",
                             duration: 0.2,
                             delay: 3,
                             repeat: 3,
                             repeatType: "reverse",
-                        }} 
-                        className='absolute bottom-0 right-0 text-4xl'>👋</motion.div>
+                        }}
+                        className='absolute bottom-0 right-0 text-4xl'>{getEmoji()}</motion.div>
                 </motion.div>
                 <div className='space-y-6'>
-                    <motion.h1 
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        type: "keyframes",
-                        duration: 0.5,
-                    }}
-                    className='text-3xl lg:text-4xl text-center font-bold'>Hugo Madureira</motion.h1>
+                    <motion.h1
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            type: "keyframes",
+                            duration: 0.5,
+                        }}
+                        className='text-3xl lg:text-4xl text-center font-bold'>Hugo Madureira</motion.h1>
                     <motion.h2
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        type: "keyframes",
-                        duration: 0.5,
-                        delay: 0.25,
-                    }}
-                    className='text-2xl lg:text-4xl leading-relaxed text-center'>Développeur Full-Stack avec <span className='font-semibold'> 5 ans d&apos;expériences</span></motion.h2>
-                    <motion.h3 
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        type: "keyframes",
-                        duration: 0.5,
-                        delay: 0.5,
-                    }}
-                    className='text-xl lg:text-2xl text-center font-light italic'>Prêt à coder pour <span className='underline'>vos idées !</span> 🚀</motion.h3>
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            type: "keyframes",
+                            duration: 0.5,
+                            delay: 0.25,
+                        }}
+                        className='text-2xl lg:text-4xl leading-relaxed text-center'>Développeur Full-Stack avec <span className='font-semibold'> 5 ans d&apos;expériences</span></motion.h2>
+                    <motion.h3
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            type: "keyframes",
+                            duration: 0.5,
+                            delay: 0.5,
+                        }}
+                        className='text-xl lg:text-2xl text-center font-light italic'>Prêt à coder pour <span className='underline underline-offset-4'>vos idées !</span> 🚀</motion.h3>
                 </div>
 
                 <div className='flex flex-row gap-x-4'>

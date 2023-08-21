@@ -16,7 +16,6 @@ export default function Projects() {
             delay: 1.5,
         }}
         className='py-16'>
-
             <div className='px-8 lg:px-0 lg:w-2/3 mx-auto'>
                 
                 <h3 className='text-2xl mb-8 font-bold'>Projets</h3>
